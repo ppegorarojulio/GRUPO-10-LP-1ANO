@@ -3,70 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trani | Conectando pessoas</title>
-    <meta name="description" content="O Trani facilita o acesso de pessoas idosas a eventos, oficinas e atividades comunitárias.">
+    <title>Conviva | Conectando pessoas</title>
+    <meta name="description" content="O Conviva facilita o acesso de pessoas idosas a eventos, oficinas e atividades comunitárias.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤝</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header class="header">
     <div class="container nav">
-        <a class="logo" href="#inicio">Trani<span>+</span></a>
-        <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
+        <a href="#inicio" class="logo">Conviva<span>+</span></a>
+
+        <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+            ☰
+        </button>
+
         <nav id="navMenu">
             <a href="#problema">O problema</a>
             <a href="#solucao">A solução</a>
             <a href="#como-funciona">Como funciona</a>
             <a href="#sobre">Para organizadores</a>
         </nav>
+
         <a class="nav-button" href="#contato">Conheça o projeto</a>
     </div>
 </header>
 
 <main>
+
 <section class="hero" id="inicio">
     <div class="container hero-grid">
+
         <div class="hero-text">
             <span class="badge">Tecnologia para aproximar pessoas</span>
-            <h1>Mais encontros.<br><span>Menos solidão.</span></h1>
-            <p>O Trani conecta pessoas idosas a eventos, oficinas e atividades comunitárias, facilitando a descoberta de novas experiências e oportunidades de convivência.</p>
+
+            <h1>
+                Mais encontros.<br>
+                <span>Menos solidão.</span>
+            </h1>
+
+            <p>
+                O Conviva conecta pessoas idosas a eventos, oficinas e atividades
+                comunitárias, facilitando a descoberta de novas experiências e
+                oportunidades de convivência.
+            </p>
+
             <div class="hero-buttons">
                 <a class="button primary" href="#como-funciona">Como funciona</a>
                 <a class="button secondary" href="#solucao">Conheça a solução</a>
             </div>
-            <div class="hero-note"><strong>Para quem?</strong> Pessoas com 60 anos ou mais, familiares, centros de convivência e organizadores.</div>
-        </div>
 
-        <div class="phone-area" aria-label="Exemplo da interface do aplicativo">
-            <div class="phone">
-                <div class="phone-top"></div>
-                <div class="app-card greeting">
-                    <small>Olá!</small>
-                    <h3>3 eventos disponíveis</h3>
-                </div>
-                <div class="event-card">
-                    <div class="event-status">Aberto</div>
-                    <h3>Baile da Terceira Idade</h3>
-                    <p>📅 15/12/2025 · 19:00</p>
-                    <p>📍 Clube Municipal — Centro</p>
-                    <p>👥 2 de 10 confirmados</p>
-                    <button>Entrar no evento</button>
-                </div>
-                <div class="event-card small">
-                    <div class="event-status complete">Completo</div>
-                    <h3>Tarde de Bingo</h3>
-                    <p>📅 20/12/2025 · 14:00</p>
-                    <p>📍 Salão da Igreja São José</p>
-                </div>
+            <div class="hero-note">
+                <strong>Para quem?</strong>
+                Pessoas com 60 anos ou mais, familiares, centros de convivência e organizadores.
             </div>
         </div>
+
+        <div class="phone-area" aria-label="Prévia da interface do aplicativo Conviva">
+            <button class="carousel-arrow arrow-left" id="prevButton" aria-label="Imagem anterior">&#10094;</button>
+
+            <div class="app-carousel" role="region" aria-roledescription="carrossel" aria-live="polite">
+                <div class="carousel-slide active" data-index="0" role="group" aria-label="1 de 2">
+                    <img src="app-1.png" alt="Tela inicial do aplicativo Conviva com lista de eventos" loading="lazy" decoding="async" width="245" height="540">
+                </div>
+
+                <div class="carousel-slide" data-index="1" role="group" aria-label="2 de 2">
+                    <img src="app-2.png" alt="Tela de detalhes do evento no aplicativo Conviva" loading="lazy" decoding="async" width="245" height="540">
+                </div>
+            </div>
+
+            <button class="carousel-arrow arrow-right" id="nextButton" aria-label="Próxima imagem">&#10095;</button>
+
+            <div class="carousel-dots" role="tablist" aria-label="Selecionar imagem">
+                <button class="carousel-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Mostrar primeira imagem"></button>
+                <button class="carousel-dot" data-index="1" role="tab" aria-selected="false" aria-label="Mostrar segunda imagem"></button>
+            </div>
+        </div>
+
     </div>
 </section>
 
 <section class="stats">
     <div class="container stats-grid">
-        <div class="stat"><strong>48,5%</strong><span>relataram sentir solidão algumas vezes ou sempre</span></div>
-        <div class="stat"><strong>60+</strong><span>público principal do projeto</span></div>
-        <div class="stat"><strong>1 lugar</strong><span>para encontrar atividades e participar</span></div>
+        <div class="stat">
+            <strong>48,5%</strong>
+            <span>relataram sentir solidão algumas vezes ou sempre</span>
+        </div>
+
+        <div class="stat">
+            <strong>60+</strong>
+            <span>público principal do projeto</span>
+        </div>
+
+        <div class="stat">
+            <strong>1 lugar</strong>
+            <span>para encontrar atividades e participar</span>
+        </div>
     </div>
 </section>
 
@@ -76,9 +109,19 @@
             <span class="section-tag">O problema</span>
             <h2>Participar começa por conseguir encontrar.</h2>
         </div>
+
         <div>
-            <p>Pessoas idosas podem ter dificuldade para descobrir atividades, saber onde elas acontecem e confirmar presença. Quando isso se soma a pouca frequência de contatos sociais, participar de novas experiências pode se tornar ainda mais difícil.</p>
-            <p class="highlight">O Trani busca diminuir essa barreira aproximando pessoas, organizadores e comunidades.</p>
+            <p>
+                Pessoas idosas podem ter dificuldade para descobrir atividades,
+                saber onde elas acontecem e confirmar presença. Quando isso se
+                soma a pouca frequência de contatos sociais, participar de novas
+                experiências pode se tornar ainda mais difícil.
+            </p>
+
+            <p class="highlight">
+                O Conviva busca diminuir essa barreira aproximando pessoas,
+                organizadores e comunidades.
+            </p>
         </div>
     </div>
 </section>
@@ -88,25 +131,70 @@
         <div class="center-heading">
             <span class="section-tag">A solução</span>
             <h2>Uma experiência simples e acessível</h2>
-            <p>O aplicativo deixa mais fácil o caminho entre descobrir uma atividade e participar dela.</p>
+            <p>
+                O aplicativo deixa mais fácil o caminho entre descobrir uma atividade e participar dela.
+            </p>
         </div>
+
         <div class="cards">
-            <article class="feature-card"><div class="icon">🔎</div><h3>Encontre eventos</h3><p>Veja atividades, horários, locais e vagas disponíveis.</p></article>
-            <article class="feature-card"><div class="icon">✅</div><h3>Confirme presença</h3><p>Participe com poucos toques e acompanhe seus eventos.</p></article>
-            <article class="feature-card"><div class="icon">🔔</div><h3>Receba lembretes</h3><p>Tenha as informações importantes do evento sempre por perto.</p></article>
-            <article class="feature-card"><div class="icon">🤝</div><h3>Fortaleça vínculos</h3><p>Facilite encontros presenciais e novas oportunidades de convivência.</p></article>
+            <article class="feature-card">
+                <div class="icon">🔎</div>
+                <h3>Encontre eventos</h3>
+                <p>Veja atividades, horários, locais e vagas disponíveis.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="icon">✅</div>
+                <h3>Confirme presença</h3>
+                <p>Participe com poucos toques e acompanhe seus eventos.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="icon">🔔</div>
+                <h3>Receba lembretes</h3>
+                <p>Tenha as informações importantes do evento sempre por perto.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="icon">🤝</div>
+                <h3>Fortaleça vínculos</h3>
+                <p>Facilite encontros presenciais e novas oportunidades de convivência.</p>
+            </article>
         </div>
     </div>
 </section>
 
 <section class="section" id="como-funciona">
     <div class="container">
-        <div class="center-heading"><span class="section-tag">Como funciona</span><h2>Do evento ao encontro</h2></div>
+        <div class="center-heading">
+            <span class="section-tag">Como funciona</span>
+            <h2>Do evento ao encontro</h2>
+        </div>
+
         <div class="steps">
-            <div class="step"><span>01</span><h3>Descubra</h3><p>Visualize os eventos disponíveis.</p></div>
-            <div class="step"><span>02</span><h3>Escolha</h3><p>Veja local, horário, descrição e vagas.</p></div>
-            <div class="step"><span>03</span><h3>Participe</h3><p>Confirme sua presença e acompanhe as informações.</p></div>
-            <div class="step"><span>04</span><h3>Encontre pessoas</h3><p>A tecnologia vira uma ponte para a convivência presencial.</p></div>
+            <div class="step">
+                <span>01</span>
+                <h3>Descubra</h3>
+                <p>Visualize os eventos disponíveis.</p>
+            </div>
+
+            <div class="step">
+                <span>02</span>
+                <h3>Escolha</h3>
+                <p>Veja local, horário, descrição e vagas.</p>
+            </div>
+
+            <div class="step">
+                <span>03</span>
+                <h3>Participe</h3>
+                <p>Confirme sua presença e acompanhe as informações.</p>
+            </div>
+
+            <div class="step">
+                <span>04</span>
+                <h3>Encontre pessoas</h3>
+                <p>A tecnologia vira uma ponte para a convivência presencial.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -116,14 +204,29 @@
         <div>
             <span class="section-tag">Para organizadores</span>
             <h2>Mais facilidade para divulgar atividades.</h2>
-            <p>Organizadores podem cadastrar eventos, apresentar informações importantes e acompanhar os participantes por meio de um dashboard.</p>
+            <p>
+                Organizadores podem cadastrar eventos, apresentar informações importantes
+                e acompanhar os participantes por meio de um dashboard.
+            </p>
         </div>
+
         <div class="dashboard-card">
-            <div class="dashboard-head"><span>Dashboard</span><span class="dot"></span></div>
+            <div class="dashboard-head">
+                <span>Dashboard</span>
+                <span class="dot"></span>
+            </div>
+
             <div class="dashboard-number">73</div>
             <p>participantes confirmados</p>
-            <div class="dashboard-row"><span>Baile da Terceira Idade</span><strong>73/100</strong></div>
-            <div class="progress"><div></div></div>
+
+            <div class="dashboard-row">
+                <span>Baile da Terceira Idade</span>
+                <strong>73/100</strong>
+            </div>
+
+            <div class="progress">
+                <div></div>
+            </div>
         </div>
     </div>
 </section>
@@ -133,8 +236,12 @@
         <div>
             <span class="section-tag">Próximos passos</span>
             <h2>Da descoberta ao transporte.</h2>
-            <p>No futuro, o projeto pode incluir uma solução de transporte com rotas para levar e buscar pessoas idosas nos eventos.</p>
+            <p>
+                No futuro, o projeto pode incluir uma solução de transporte com rotas
+                para levar e buscar pessoas idosas nos eventos.
+            </p>
         </div>
+
         <div class="future-icon">🚐</div>
     </div>
 </section>
@@ -142,19 +249,38 @@
 <section class="cta" id="contato">
     <div class="container">
         <h2>Vamos criar mais oportunidades de encontro?</h2>
-        <p>O Trani nasce para transformar informação em participação e tecnologia em conexão humana.</p>
-        <button class="button primary" id="ctaButton">Conhecer o projeto</button>
-        <p class="cta-message" id="ctaMessage"></p>
+        <p>
+            O Conviva nasce para transformar informação em participação e tecnologia em conexão humana.
+        </p>
+
+        <a
+            class="button primary"
+            href="https://play.google.com/store/search?q=Conviva&c=apps&hl=pt_BR"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Conhecer o nosso aplicativo!
+        </a>
     </div>
 </section>
+
 </main>
 
 <footer class="footer">
     <div class="container footer-content">
-        <div><a href="#inicio" class="logo">Trani<span>+</span></a><p>Conectando pessoas, criando momentos.</p></div>
-        <div class="source"><strong>Fonte dos dados</strong><p>ELSI-Brasil, 2015–2016.</p></div>
+        <div>
+            <a href="#inicio" class="logo">Conviva<span>+</span></a>
+            <p>Conectando pessoas, criando momentos.</p>
+        </div>
+
+        <div class="source">
+            <strong>Fonte dos dados</strong>
+            <p>ELSI-Brasil, 2015–2016.</p>
+        </div>
     </div>
 </footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>
