@@ -144,3 +144,44 @@ document.addEventListener("visibilitychange", () => {
 
 updateCarousel();
 startAutoplay();
+
+
+
+/* ===== Seção "Empresas": fica oculta até clicar em "Empresas" no topo ===== */
+const empresasLink = document.getElementById("empresasLink");
+const empresasSection = document.getElementById("empresas");
+const empresasClose = document.getElementById("empresasClose");
+
+function setEmpresasOpen(open) {
+    empresasSection.hidden = !open;
+    empresasLink.setAttribute("aria-expanded", String(open));
+}
+
+function openEmpresas() {
+    setEmpresasOpen(true);
+    empresasSection.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+empresasLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    openEmpresas();
+    history.replaceState(null, "", "#empresas");
+});
+
+empresasClose.addEventListener("click", () => {
+    setEmpresasOpen(false);
+    history.replaceState(null, "", "#sobre");
+    document.getElementById("sobre").scrollIntoView({ behavior: "smooth", block: "start" });
+    empresasLink.focus({ preventScroll: true });
+});
+
+// Abre direto se a página for acessada com o link ...#empresas
+if (location.hash === "#empresas") {
+    setEmpresasOpen(true);
+    empresasSection.scrollIntoView();
+}
+
+// Também abre se o endereço mudar para #empresas com a página já aberta
+window.addEventListener("hashchange", () => {
+    if (location.hash === "#empresas") openEmpresas();
+});
